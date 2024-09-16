@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/644497fdaf.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="/emvizzy.png" class="logo">
+                    <ul id="sidemenu">
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <!-- Added Shop subtitle -->
+                        <li class="shop-subtitle"><a href="#shop">Shop</a></li>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>WELCOME</p>
+                    <h1>To <span>eMVizZy</span> <br>The Brand</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slideshow Section -->
+        <div id="slideshow-container">
+            <div id="slideshow">
+                <div class="slide">
+                    <img src="shirt1.jpg" alt="Shirt 1">
+                </div>
+                <div class="slide">
+                    <img src="shirt2.jpg" alt="Shirt 2">
+                </div>
+                <div class="slide">
+                    <img src="shirt3.jpg" alt="Shirt 3">
+                </div>
+            </div>
+            <!-- Shop button -->
+            <button class="shop-btn" onclick="window.location.href='shop.html'">Shop</button>
+        </div>
+
+        <script>
+            // JavaScript for slideshow
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let slides = document.getElementsByClassName("slide");
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 3000); // Change image every 3 seconds
+            }
+        </script>
+
+        <!-- Other sections of your webpage -->
+
+        <div class="copyright">
+            <p>copyright @ Njenga. Made with <i class="fa-solid fa-heart"></i> with visual studio</p>
+        </div>
+    </body>
+</html>
