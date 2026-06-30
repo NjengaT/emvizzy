@@ -1,76 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Personal Portfolio Website</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/644497fdaf.js" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMVIZY | Design Portfolio</title>
+    <!-- Google Fonts: Imperial Serif & Clean Sans-Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">
+            <a href="logo.png">EMVIZY</a>
+        </div>
+        <nav>
+            <a href="#work">Archives</a>
+            <a href="#about">Manifesto</a>
+            <a href="#contact">Commence</a>
+        </nav>
+    </header>
+
+    <!-- Hero Showcase Section -->
+    <section class="hero">
+        <h1>EMVIZY STUDIO</h1>
+        <p>Visual Alchemy & High-Gothic Graphic Design</p>
+    </section>
+
+   <!-- Portfolio Grid Section -->
+<section class="portfolio-section" id="work">
+    <h2 class="section-title">Selected Graphic Works</h2>
+    
+    <div class="grid">
         
-    </head>
-    <body>
-        <div id="header">
-            <div class="container">
-                <nav>
-                    <img src="/emvizzy.png" class="logo">
-                    <ul id="sidemenu">
-                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <!-- Added Shop subtitle -->
-                        <li class="shop-subtitle"><a href="#shop">Shop</a></li>
-                    </ul>
-                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-                </nav>
-                <div class="header-text">
-                    <p>WELCOME</p>
-                    <h1>To <span>eMVizZy</span> <br>The Brand</h1>
-                </div>
+        <!-- Project 1: Asymmetrical Large Box -->
+        <div class="grid-item col-8 item-1">
+            <div class="image-container">
+                <!-- SWAPPED PLACEHOLDER FOR ACTUAL IMAGE -->
+                <img src="mvzdesign13.jpg" alt="Imperial Monolith Design" class="portfolio-img">
+                <div class="item-overlay-text">I</div>
+            </div>
+            <div class="item-info">
+                <h3>Imperial Monolith</h3>
+                <p>Editorial Print & Typography / Brand Identity</p>
             </div>
         </div>
 
-        <!-- Slideshow Section -->
-        <div id="slideshow-container">
-            <div id="slideshow">
-                <div class="slide">
-                    <img src="shirt1.jpg" alt="Shirt 1">
-                </div>
-                <div class="slide">
-                    <img src="shirt2.jpg" alt="Shirt 2">
-                </div>
-                <div class="slide">
-                    <img src="shirt3.jpg" alt="Shirt 3">
-                </div>
+        <!-- Project 2: Asymmetrical Smaller Box -->
+        <div class="grid-item col-4 item-2">
+            <div class="image-container">
+                <img src="mvzdesign3.jpg" alt="Sacred Geometry Design" class="portfolio-img">
+                <div class="item-overlay-text">II</div>
             </div>
-            <!-- Shop button -->
-            <button class="shop-btn" onclick="window.location.href='shop.html'">Shop</button>
+            <div class="item-info">
+                <h3>Sacred Geometry</h3>
+                <p>Vector Illustration / Dark Art Emblems</p>
+            </div>
         </div>
 
-        <script>
-            // JavaScript for slideshow
-            let slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                let slides = document.getElementsByClassName("slide");
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) { slideIndex = 1 }
-                slides[slideIndex - 1].style.display = "block";
-                setTimeout(showSlides, 3000); // Change image every 3 seconds
-            }
-        </script>
-
-        <!-- Other sections of your webpage -->
-
-        <div class="copyright">
-            <p>copyright @ Njenga. Made with <i class="fa-solid fa-heart"></i> with visual studio</p>
+        <!-- Project 3: Split Balance Left -->
+        <div class="grid-item col-6 item-3">
+            <div class="image-container">
+                <img src="mvzdesign12.jpg"Nocturnal Textures Layout" class="portfolio-img">
+                <div class="item-overlay-text">III</div>
+            </div>
+            <div class="item-info">
+                <h3>Nocturnal Textures</h3>
+                <p>Packaging Layout / Greyscale Textures</p>
+            </div>
         </div>
-    </body>
+
+        <!-- Project 4: Split Balance Right -->
+        <div class="grid-item col-6 item-4">
+            <div class="image-container">
+                <img src="mvzdesign5.png" alt="Cathedral Architecture Zine" class="portfolio-img">
+                <div class="item-overlay-text">IV</div>
+            </div>
+            <div class="item-info">
+                <h3>Cathedral Architecture Zine</h3>
+                <p>Digital Art / Layout Architecture</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <!-- Minimalist Gothic Footer -->
+    <footer>
+        <div class="footer-logo">
+            <img src="finallogo.png" alt="EMVIZY " class="brand-logo-img footer-logo-img">
+        </div>
+        <p class="footer-tagline">Where shadows define the light.</p>
+        <p class="footer-credits">&copy; 2026 EMVIZY. All Rights Reserved.</p>
+    </footer>
+
+</body>
 </html>
